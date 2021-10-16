@@ -21,3 +21,8 @@
     position: relative;
     overflow: hidden;
 }
+
+.dark {
+    color: white;
+    background-color: #2d2f33;
+}

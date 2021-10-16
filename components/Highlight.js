@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Highlight({body, title, wilburImage}) {
     return (
-        <div className={highlightStyles.container}>
+        <div className={`${highlightStyles.container} ${highlightStyles.dark}`}>
             <div className={highlightStyles.highlightLeft}>
                 <h1>{title}</h1>
                 <p>{body}</p>

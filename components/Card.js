@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Card({body, title, wilburImage}) {
     return (
-        <div className={cardStyles.container}>
+        <div className={`${cardStyles.container} ${cardStyles.dark}`}>
             <div className={cardStyles.cardTop}>
                 <h1>{title}</h1>
                 <p>{body}</p>

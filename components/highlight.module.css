@@ -14,7 +14,6 @@
 .highlightLeft {
     padding: 8px 32px 16px 16px;
     min-width: 200px;
-    flex: 0.5;
 }
 
 .highlightRight {
@@ -31,4 +30,15 @@
     object-fit: fill;
     position: relative;
     overflow: hidden;
+}
+
+.dark {
+    color: white;
+    background-color: #2d2f33;
+}
+
+@media only screen and (min-width: 500px)  {
+    .highlightLeft {
+        flex: 0.5;
+    }
 }
