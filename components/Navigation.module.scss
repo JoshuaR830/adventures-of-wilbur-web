@@ -1,42 +1,74 @@
-.nav {
-    width: 100%;
-    background-color: #2d2f33;
-    display: flex;
-    position: fixed;
-    justify-content: space-evenly;
-    bottom: 0;
-    z-index: 9999;
-    
-    .navItem {
-        background-color: #2d2f33;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex: 1;
-        margin: 4px auto;
-        text-align: center;
+@use '../styles/colors.scss' as *;
 
-        .navItemIconContainer {
-            padding: 4px 20px;
-            margin: auto 4px;
-            text-align: center;
-            justify-content: center;
-            border-radius: 24px;
-            line-height: 0.8;
-        }
+.wrapper {
+    min-width: 72px;
+    position: relative;
+
+    .nav {
+        background-color: $heath-green;
+        display: flex;
+        position: fixed;
+        justify-content: space-evenly;
+        bottom: 0;
+        z-index: 9999;
+        width: 100%;
         
-        &:hover,
-        &.active {
+        .navItem {
+            background-color: $heath-green;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+            margin: 4px auto;
+            text-align: center;
+
             .navItemIconContainer {
-                background-color: #004a77;
+                padding: 4px 20px;
+                margin: auto 4px;
+                text-align: center;
+                justify-content: center;
+                border-radius: 24px;
+                line-height: 0.8;
+
+                img {
+                    filter: invert(81%) sepia(20%) saturate(324%) hue-rotate(5deg) brightness(91%) contrast(84%);
+                }
+            }
+            
+            .navItemText {
+                color: $soft-fur-brown;
+                text-align: center;
+            }
+
+            &:hover,
+            &.active {
+                .navItemText {
+                    color: $bubbles-galore-white;
+                }
+                .navItemIconContainer {
+                    background-color: $jungle-green;
+
+                    img {
+                        filter: invert(100%);
+                    }
+                }
             }
         }
+
+        @media only screen and (min-width: 768px) {
+            flex-direction: column;
+            width: auto;
+            justify-content: flex-start;
+            height: 100%;
+        } 
     }
-    
-    .navItemText {
-        color: #ffffff;
-        text-align: center;
-    }
+
+    @media only screen and (min-width: 768px) {
+        height: 100%;
+        width: auto;
+        justify-content: flex-start;
+        // display: none;
+    } 
 }
 
 

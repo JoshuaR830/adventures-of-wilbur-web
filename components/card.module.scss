@@ -4,8 +4,8 @@
     border-radius: 16px;
     margin: 4px;
     max-width: 400px;
-    -webkit-box-shadow: 4px 4px 8px 0px #00000055; 
-    box-shadow: 4px 4px 8px 0px #00000055;
+    -webkit-box-shadow: 4px 4px 8px 0px $shadow-color; 
+    box-shadow: 4px 4px 8px 0px $shadow-color;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -25,6 +25,6 @@
 }
 
 .dark {
-    color: white;
-    background-color: $background-color;
+    color: $soft-fur-brown;
+    background-color: $heath-green;
 }

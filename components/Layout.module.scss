@@ -1,3 +1,17 @@
-.layout {
-    padding: 0 8px 80px 8px;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    
+    .layout {
+        flex: 1;
+        padding: 0 8px 80px 8px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        height: 100%;
+        width: auto;
+        justify-content: flex-start;
+        flex-direction: row;
+    } 
 }
