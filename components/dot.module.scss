@@ -1,0 +1,26 @@
+@use '../styles/colors.scss' as *;
+
+.outerContainer {
+    width: 100%;
+    padding: 4px 0 16px 0;
+}
+
+.container {
+    /* display: flex; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    margin: 4px;
+    border: 2px solid $theme-color;
+    background-color: $background-color;
+}
+
+.active {
+    background-color: $theme-color;
+}

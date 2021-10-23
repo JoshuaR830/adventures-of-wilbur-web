@@ -1,7 +1,9 @@
+@use '../styles/colors.scss' as *;
+
 .container {
     border-radius: 16px;
     margin: 4px;
-    max-width: 300px;
+    max-width: 400px;
     -webkit-box-shadow: 4px 4px 8px 0px #00000055; 
     box-shadow: 4px 4px 8px 0px #00000055;
     overflow: hidden;
@@ -10,7 +12,7 @@
 }
 
 .cardTop {
-    padding: 8px;
+    padding: 16px 16px;
     flex: 1;
 }
 
@@ -24,5 +26,5 @@
 
 .dark {
     color: white;
-    background-color: #2d2f33;
+    background-color: $background-color;
 }

@@ -1,0 +1,42 @@
+.nav {
+    width: 100%;
+    background-color: #2d2f33;
+    display: flex;
+    position: fixed;
+    justify-content: space-evenly;
+    bottom: 0;
+    z-index: 9999;
+    
+    .navItem {
+        background-color: #2d2f33;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        margin: 4px auto;
+        text-align: center;
+
+        .navItemIconContainer {
+            padding: 4px 20px;
+            margin: auto 4px;
+            text-align: center;
+            justify-content: center;
+            border-radius: 24px;
+            line-height: 0.8;
+        }
+        
+        &:hover,
+        &.active {
+            .navItemIconContainer {
+                background-color: #004a77;
+            }
+        }
+    }
+    
+    .navItemText {
+        color: #ffffff;
+        text-align: center;
+    }
+}
+
+

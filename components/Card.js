@@ -1,4 +1,4 @@
-import cardStyles from './card.module.css'
+import cardStyles from './card.module.scss'
 import Image from 'next/image'
 
 export default function Card({body, title, wilburImage}) {

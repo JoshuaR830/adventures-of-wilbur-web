@@ -1,4 +1,4 @@
-import layoutStyles from './Layout.module.css'
+import layoutStyles from './Layout.module.scss'
 import Nav from './Navigation'
 
 export default function Layout({children}) {
