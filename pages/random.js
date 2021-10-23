@@ -1,10 +1,13 @@
 import Layout from '../components/Layout'
 import WorkInProgress from "../components/WorkInProgress";
+import pageStyles from "../styles/Random.module.scss"
 
 export default function Random() {
     return (
         <Layout>
-            <WorkInProgress></WorkInProgress>
+            <div className={pageStyles.flexContainer}>
+                <WorkInProgress></WorkInProgress>
+            </div>
         </Layout>
     )
 }

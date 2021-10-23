@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Wilbur.module.css'
+import styles from '../styles/Feed.module.scss'
 import Card from '../components/Card'
 import Highlight from '../components/Highlight'
 import Layout from '../components/Layout'
