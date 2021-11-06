@@ -6,7 +6,7 @@ export default function Story() {
     return (
         <Layout>
             <div className={pageStyles.flexContainer}>
-                <WorkInProgress></WorkInProgress>
+                <WorkInProgress image></WorkInProgress>
             </div>
         </Layout>
     )
