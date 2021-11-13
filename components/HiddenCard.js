@@ -19,7 +19,7 @@ export default function HiddenCard() {
                 </div>
             </div>
             <div className={cardStyles.image}>
-                <div class={cardStyles.loader}></div>
+                <div className={cardStyles.loader}></div>
             </div>
         </div>
     )

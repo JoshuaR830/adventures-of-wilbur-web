@@ -3,9 +3,8 @@ import Image from 'next/image'
 import Dots from './dots'
 import More from './More'
 
-const myLoader = ({ src, width, quality }) => {
-    return `${src}`
-}
+// eslint-disable-next-line no-unused-vars
+const myLoader = ({ src, width, quality }) => `${src}`;
 
 export default function Highlight({body, title, wilburImage}) {
     return (
