@@ -3,6 +3,10 @@ import Image from 'next/image'
 import Dots from './dots'
 import More from './More'
 
+const myLoader = ({ src, width, quality }) => {
+    return `${src}`
+}
+
 export default function Highlight({body, title, wilburImage}) {
     return (
         <>
@@ -21,6 +25,7 @@ export default function Highlight({body, title, wilburImage}) {
                         layout={"fill"}
                         objectFit={"cover"}
                         className={highlightStyles.image}
+                        loader={myLoader}
                     />
                 </div>
             </div>

@@ -3,6 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
+const myLoader = ({ src, width, quality }) => {
+    return `${src}`
+}
+
 export default function NavItem({text, iconName, link}) {
     const router = useRouter();
     
@@ -16,7 +20,9 @@ export default function NavItem({text, iconName, link}) {
                                 priority
                                 src={iconName}
                                 width={24}
-                                height={24}/>
+                                height={24}
+                                loader={myLoader}
+                                />
                         </div>
                         <div className={navStyles.navItemText}>{text}</div>
                     </div>

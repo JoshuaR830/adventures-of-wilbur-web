@@ -2,6 +2,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 import moreStyles from './More.module.scss'
 
+const myLoader = ({ src, width, quality }) => {
+    return `${src}`
+}
+
 export default function More({content, isVisible}) {
     const [visibility, setVisibility] = useState(isVisible)
 
@@ -23,6 +27,7 @@ export default function More({content, isVisible}) {
                             src={`/images/expand/${visibility?"less":"more"}.svg`}
                             width={24}
                             height={24}
+                            loader={myLoader}
                         />
                     </div>
                 </div>

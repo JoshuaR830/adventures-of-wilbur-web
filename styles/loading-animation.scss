@@ -1,0 +1,41 @@
+@mixin loading-spinner {
+    position: relative;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    background-color: $jungle-green;
+    z-index: 1;
+    
+    &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: $soft-fur-brown;
+        border-radius: 40px 0 0 0;
+        transform-origin: bottom right;
+        animation: rotation 2s infinite linear;
+    }
+    
+    &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        margin: 8px;
+        width: 64px;
+        height: 64px;
+        border-radius: 80px;
+        background-color: $heath-green;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}

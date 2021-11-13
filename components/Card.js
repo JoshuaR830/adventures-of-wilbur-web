@@ -1,6 +1,11 @@
 import cardStyles from './card.module.scss'
 import Image from 'next/image'
 
+const myLoader = ({ src, width, quality }) => {
+    return `${src}`
+}
+
+  
 export default function Card({body, title, wilburImage}) {
     return (
         <div className={`${cardStyles.container} ${cardStyles.dark}`}>
@@ -9,6 +14,7 @@ export default function Card({body, title, wilburImage}) {
                 <p>{body}</p>
             </div>
             <div className={cardStyles.image}>
+                <div class={cardStyles.loader}></div>
                 <Image
                     priority
                     src={wilburImage}
@@ -16,6 +22,7 @@ export default function Card({body, title, wilburImage}) {
                     layout={"fill"}
                     objectFit={"cover"}
                     className={cardStyles.image}
+                    loader={myLoader}
                 />
             </div>
             {/* <div className={cardStyles.image}>

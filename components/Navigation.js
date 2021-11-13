@@ -1,5 +1,4 @@
 import navStyles from './Navigation.module.scss'
-import Image from 'next/image'
 import NavItem from './NavigationItem'
 
 export default function Nav() {
