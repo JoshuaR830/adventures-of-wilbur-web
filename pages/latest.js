@@ -1,13 +1,15 @@
-import Layout from "../components/Layout";
-import WorkInProgress from "../components/WorkInProgress";
-import pageStyles from "../styles/Latest.module.scss"
+import Layout from '../components/Layout';
+import WorkInProgress from '../components/WorkInProgress';
+import pageStyles from '../styles/Latest.module.scss';
 
-export default function Latest() {
-    return (
-        <Layout>
-            <div className={pageStyles.flexContainer}>
-                <WorkInProgress></WorkInProgress>
-            </div>
-        </Layout>
-    )
-}
+const Latest = function Latest() {
+  return (
+    <Layout>
+      <div className={pageStyles.flexContainer}>
+        <WorkInProgress />
+      </div>
+    </Layout>
+  );
+};
+
+export default Latest;

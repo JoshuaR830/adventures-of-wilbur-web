@@ -1,13 +1,15 @@
-import Layout from '../components/Layout'
-import WorkInProgress from "../components/WorkInProgress";
-import pageStyles from "../styles/Story.module.scss"
+import Layout from '../components/Layout';
+import WorkInProgress from '../components/WorkInProgress';
+import pageStyles from '../styles/Story.module.scss';
 
-export default function Story() {
-    return (
-        <Layout>
-            <div className={pageStyles.flexContainer}>
-                <WorkInProgress image></WorkInProgress>
-            </div>
-        </Layout>
-    )
-}
+const Story = function Story() {
+  return (
+    <Layout>
+      <div className={pageStyles.flexContainer}>
+        <WorkInProgress image />
+      </div>
+    </Layout>
+  );
+};
+
+export default Story;
