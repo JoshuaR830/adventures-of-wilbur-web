@@ -1,6 +1,5 @@
 import useSWRInfinite from 'swr/infinite';
-import { useState } from 'react';
-import fetch from 'node-fetch';
+import { useState, useEffect } from 'react';
 import Card from '../components/Card';
 import HiddenCard from '../components/HiddenCard';
 import Layout from '../components/Layout';
@@ -22,7 +21,10 @@ const Home = function Home() {
   const [isHidden, setIsHidden] = useState(false);
   const [prevSize, setPrevSize] = useState(0);
 
+  const [previousHeight, setPreviousHeight] = useState(0);
+
   const fetcher = async (url) => {
+    // eslint-disable-next-line no-undef
     const res = await fetch(url);
     return res.json();
   };
@@ -33,6 +35,20 @@ const Home = function Home() {
     setSize(size + 1);
     setIsHidden(false);
   };
+
+  const handleScroll = () => {
+    if (document.body.scrollHeight - (window.scrollY + window.innerHeight) < 1000) {
+      if (document.body.scrollHeight > previousHeight) {
+        setPreviousHeight(document.body.scrollHeight);
+        handleClick();
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
 
   if (!data) {
     return (
@@ -56,7 +72,7 @@ const Home = function Home() {
 
   return (
     <Layout>
-      <div className={styles.flexContainer}>
+      <div className={styles.flexContainer} onScroll={() => handleScroll()}>
         {
           data.map((posts) => posts.map(({
             id, title, body, wilburImage,
@@ -71,19 +87,17 @@ const Home = function Home() {
           )))
         }
 
-        {isHidden ? (
-          <div className={styles.fullWidth}>
-            <button type="button" onClick={() => handleClick()}>More</button>
-          </div>
+        {(!isHidden) ? (
+          <>
+            <HiddenCard />
+            <HiddenCard />
+            <HiddenCard />
+            <HiddenCard />
+            <HiddenCard />
+            <HiddenCard />
+          </>
         ) : (
-          <div>
-            <HiddenCard />
-            <HiddenCard />
-            <HiddenCard />
-            <HiddenCard />
-            <HiddenCard />
-            <HiddenCard />
-          </div>
+          <div>Loading</div>
         )}
       </div>
     </Layout>
