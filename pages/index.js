@@ -97,7 +97,7 @@ const Home = function Home() {
             <HiddenCard />
           </>
         ) : (
-          <div>Loading</div>
+          <div className={styles.fullWidth} />
         )}
       </div>
     </Layout>
