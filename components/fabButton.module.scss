@@ -1,0 +1,68 @@
+@use '../styles/colors.scss' as *;
+
+.fabButton {
+  background-color: $heath-green;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  max-width: max-content;
+  justify-content: start;
+  overflow: hidden;
+  // position: absolute;
+  // top: 50px;
+  // right: 50px;
+
+  &.animated {
+    animation: shrinkFab 1s 1 forwards;
+  }
+
+  .buttonText {
+    color: $soft-fur-brown;
+    padding-left: 16px;
+    flex: 0.5;
+  }
+
+  .imageContainer {
+    min-width: 24px;
+    min-height: 24px;
+    margin: auto;
+    text-align: center;
+    flex: 1;
+    filter: invert(81%) sepia(20%) saturate(324%) hue-rotate(5deg) brightness(91%) contrast(84%);
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $jungle-green;
+
+    &.animated {
+      animation: expandFab 1s 1 forwards;
+    }
+
+    .buttonText {
+      color: $bubbles-galore-white;
+    }
+
+    .imageContainer {
+      filter: invert(100%);
+    }
+  }
+}
+
+@keyframes shrinkFab {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 56px;
+  }
+}
+
+@keyframes expandFab {
+  0% {
+    width: 56px;
+  }
+  100% {
+    width: 100%;
+  }
+}
