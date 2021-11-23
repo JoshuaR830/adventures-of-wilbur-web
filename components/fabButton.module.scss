@@ -47,6 +47,28 @@
       filter: invert(100%);
     }
   }
+
+  &.absolute {
+    position: fixed;
+    bottom: 86px;
+    z-index: 1000;
+
+    &.right {
+      right: 16px;
+    }
+    
+    &.left {
+      left: 16px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      bottom: 16px;
+
+      &.left {
+        left: 88px;
+      }
+    }
+  }
 }
 
 @keyframes shrinkFab {
