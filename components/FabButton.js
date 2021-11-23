@@ -5,10 +5,10 @@ import style from './fabButton.module.scss';
 const myLoader = ({ src, width, quality }) => `${src}`;
 
 const FabButton = function FabButton({
-  onClick, imageSrc, text, previous, onKeyDown,
+  onClick, imageSrc, text, previous, onKeyDown, animated,
 }) {
   return (
-    <div tabIndex="0" role="button" onClick={onClick} onKeyDown={onKeyDown} className={`${style.fabButton} ${style.animated} ${style.absolute} ${(previous ? style.left : style.right)}`}>
+    <div tabIndex="0" role="button" onClick={onClick} onKeyDown={onKeyDown} className={`${style.fabButton} ${animated ? style.animated : ''} ${style.absolute} ${(previous ? style.left : style.right)}`}>
       <div className={style.imageContainer}>
         <Image
           src={imageSrc}

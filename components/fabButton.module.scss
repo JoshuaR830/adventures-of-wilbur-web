@@ -6,6 +6,7 @@
   padding: 16px;
   display: flex;
   max-width: max-content;
+  width: 56px;
   justify-content: start;
   overflow: hidden;
   // position: absolute;
@@ -25,6 +26,7 @@
   .imageContainer {
     min-width: 24px;
     min-height: 24px;
+    max-height: 24px;
     margin: auto;
     text-align: center;
     flex: 1;

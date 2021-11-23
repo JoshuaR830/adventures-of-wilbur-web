@@ -1,0 +1,20 @@
+{
+    "name": "Wilbur's Adventures",
+    "short_name": "Wilbur",
+    "icons": [
+        {
+            "src": "/wilbur-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/wilbur-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#344739",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
+}

@@ -46,7 +46,7 @@ const Random = function Random() {
           />
         )}
       </div>
-      <FabButton onClick={(() => handleClick())} onKeyDown={((e) => handleKeyDown(e))} imageSrc="/images/random.svg" text="Random" />
+      <FabButton onClick={(() => handleClick())} onKeyDown={((e) => handleKeyDown(e))} imageSrc="/images/refresh.svg" text="Random" />
     </Layout>
   );
 };
